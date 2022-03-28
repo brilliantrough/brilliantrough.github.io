@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #790a8b;
+  background: #f252fe;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2451,11 +2451,24 @@ embed {
   white-space: nowrap;
 }
 body {
-  background: url("/images/background.jpg");
+  background: url("/images/ocean.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+}
+.post-block {
+  opacity: 0.9;
+}
+.sidebar {
+  background-color: transparent;
+  opacity: 0.9;
+}
+.header-inner {
+  background: rgba(255,255,255,0.9);
+}
+.popup {
+  opacity: 0.9;
 }
 .post {
   margin-top: 60px;
