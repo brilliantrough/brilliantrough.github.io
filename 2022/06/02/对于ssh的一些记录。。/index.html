@@ -23,17 +23,21 @@
     var CONFIG = {"hostname":"pezayo.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="坚持，马上开始博客之旅">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pezayo&#39;s Blog">
-<meta property="og:url" content="https://pezayo.com/archives/index.html">
+  <meta name="description" content="SSH 概述#ssh 本质是 Secure Shell ，ssh协议安全，可靠，有效。现在使用量大，普遍。比如我就在用。  SSH 为 [Secure Shell](https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;Secure Shell) 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。SSH 是较可靠，专为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对于ssh的一些记录。。">
+<meta property="og:url" content="https://pezayo.com/2022/06/02/%E5%AF%B9%E4%BA%8Essh%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95%E3%80%82%E3%80%82/index.html">
 <meta property="og:site_name" content="pezayo&#39;s Blog">
-<meta property="og:description" content="坚持，马上开始博客之旅">
+<meta property="og:description" content="SSH 概述#ssh 本质是 Secure Shell ，ssh协议安全，可靠，有效。现在使用量大，普遍。比如我就在用。  SSH 为 [Secure Shell](https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;Secure Shell) 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。SSH 是较可靠，专为">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-02T12:34:18.000Z">
+<meta property="article:modified_time" content="2022-06-02T13:59:51.318Z">
 <meta property="article:author" content="pezayo">
+<meta property="article:tag" content="useful">
+<meta property="article:tag" content="ssh">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://pezayo.com/archives/">
+<link rel="canonical" href="https://pezayo.com/2022/06/02/%E5%AF%B9%E4%BA%8Essh%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95%E3%80%82%E3%80%82/">
 
 
 <script id="page-configurations">
@@ -41,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | pezayo's Blog</title>
+  <title>对于ssh的一些记录。。 | pezayo's Blog</title>
   
 
 
@@ -195,236 +199,200 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pezayo.com/2022/06/02/%E5%AF%B9%E4%BA%8Essh%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95%E3%80%82%E3%80%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/classic.jpg">
+      <meta itemprop="name" content="pezayo">
+      <meta itemprop="description" content="坚持，马上开始博客之旅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pezayo's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          对于ssh的一些记录。。
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-06-02 20:34:18 / 修改时间：21:59:51" itemprop="dateCreated datePublished" datetime="2022-06-02T20:34:18+08:00">2022-06-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/casual/" itemprop="url" rel="index"><span itemprop="name">casual</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 10 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/06/02/%E5%AF%B9%E4%BA%8Essh%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95%E3%80%82%E3%80%82/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/06/02/%E5%AF%B9%E4%BA%8Essh%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95%E3%80%82%E3%80%82/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <h1><span id="ssh-gai-shu">SSH 概述</span><a href="#ssh-gai-shu" class="header-anchor">#</a></h1><p>ssh 本质是 Secure Shell ，ssh协议安全，可靠，有效。现在使用量大，普遍。比如我就在用。</p>
+<blockquote>
+<p>SSH 为 [Secure Shell](<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Secure">https://baike.baidu.com/item/Secure</a> Shell) 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。SSH 是较可靠，专为<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95/1071998">远程登录</a>会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题。SSH最初是UNIX系统上的一个程序，后来又迅速扩展到其他操作平台。SSH在正确使用时可弥补网络中的漏洞。<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/SSH%E5%AE%A2%E6%88%B7%E7%AB%AF/7091372">SSH客户端</a>适用于多种平台。几乎所有UNIX平台—包括<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/HP-UX">HP-UX</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux">Linux</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/AIX">AIX</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Solaris/3517">Solaris</a>、Digital <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/UNIX">UNIX</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Irix">Irix</a>，以及其他平台，都可运行SSH。</p>
+</blockquote>
+<p>以上来自<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/SSH/10407">百度百科</a> （严谨）</p>
+<p>关于 SSH 的使用还是相对比较麻烦的。还是一样的总是忘，忘了查，查了记，记了忘。并且每次都会回到最开始的理解，即我后来即使有了自己的一定理解过后，还是会忘。。。。</p>
+<h1><span id="ssh-de-yi-xie-pei-zhi-ji-lu-he-fang-fa">SSH 的一些配置记录和方法</span><a href="#ssh-de-yi-xie-pei-zhi-ji-lu-he-fang-fa" class="header-anchor">#</a></h1><h2><span id="mu-lu">目录</span><a href="#mu-lu" class="header-anchor">#</a></h2><p>SSH 在操作系统中的目录形式都表现为有一个 <code>~/.ssh</code> 的目录。Linux 下目录即为使用者家目录下，Windows 中则为 <code>C:\Users\你的用户名</code> 这个目录下。在这个.ssh 目录中会有一些必要的配置文件之类的一些东西存储在其中。且操作系统有关 SSH 的任何操作和记录都在其中，与其他无关。</p>
+<h2><span id="wen-jian">文件</span><a href="#wen-jian" class="header-anchor">#</a></h2><p>.ssh 目录下的文件主要是这些（至少我的操作系统上用到并产生的文件是这些）</p>
+<ol>
+<li>config </li>
+<li>id_rsa.pub&#x2F;id_rsa</li>
+<li>know_hosts&#x2F;know_hosts.old</li>
+<li>authorized_keys</li>
+</ol>
+<p>其中 config 是一些配置，是关于多个 ssh 目标时使用 config 来进行区分。 id_rsa 是本机的私有密钥，pub 后缀则是公钥。传输认证时服务器事先存储主机（客户机）的公钥，然后主机传输私钥进行请求，服务器根据存储的公钥进行识别。authorized_keys 作用于服务器，识别标记主机，使得主机在每次请求连接时都不用再输入密码。</p>
+<p>其中 id_rsa 可以用 <code>genkey</code> 命令生成。我在Linux中在配置Git时使用了这个，但是锁定的是我的 Git 邮箱账户，而非我的 Linux 系统主机。当时使用的命令为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>使用的便是我的邮箱，后来我又使用了<code>ssh-keygen</code> 直接生成了主机名字的 id_rsa.pub&#x2F;id_rsa 的密钥对。</p>
+<h2><span id="config">config</span><a href="#config" class="header-anchor">#</a></h2><p>config的具体配置如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Host: pezayo</span><br><span class="line">Username: pzy111</span><br><span class="line">IdentityFiles: id_rsa</span><br><span class="line"></span><br><span class="line">Host: github</span><br><span class="line">Username: brilliantough</span><br><span class="line">IdentityFiles: id_rsa_github</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-06-02T20:34:18+08:00"
-              content="2022-06-02">
-          06-02
-        </time>
-      </div>
+    
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+    
+        
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/02/%E5%AF%B9%E4%BA%8Essh%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95%E3%80%82%E3%80%82/" itemprop="url">
-            <span itemprop="name">对于ssh的一些记录。。</span>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>pezayo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://pezayo.com/2022/06/02/%E5%AF%B9%E4%BA%8Essh%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95%E3%80%82%E3%80%82/" title="对于ssh的一些记录。。">https://pezayo.com/2022/06/02/对于ssh的一些记录。。/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
           </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-05-28T19:33:30+08:00"
-              content="2022-05-28">
-          05-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/05/28/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" itemprop="url">
-            <span itemprop="name">居家必备奇技淫巧</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-05-28T18:58:09+08:00"
-              content="2022-05-28">
-          05-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/05/28/%E6%B2%A1%E6%9C%89%E4%BD%A0%EF%BC%88%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%89%E6%88%91%E6%80%8E%E4%B9%88%E6%B4%BB/" itemprop="url">
-            <span itemprop="name">没有你（快捷键）我怎么活</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-08T17:28:44+08:00"
-              content="2022-04-08">
-          04-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/08/hexo%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">hexo图片问题</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-08T16:55:35+08:00"
-              content="2022-04-08">
-          04-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/08/demotest/" itemprop="url">
-            <span itemprop="name">demotest</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-08T01:55:08+08:00"
-              content="2022-04-08">
-          04-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/08/Changes%20in%20Ubuntu/" itemprop="url">
-            <span itemprop="name">Changes or configuration in Ubuntu</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-08T01:55:08+08:00"
-              content="2022-04-08">
-          04-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/08/Changes%20in%20Ubuntu/sshd_confi%20c24b2/" itemprop="url">
-            <span itemprop="name">sshd_config content</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-03-28T14:23:14+08:00"
-              content="2022-03-28">
-          03-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/28/Multisim%E5%AE%89%E8%A3%85(%E4%BF%9D%E5%A7%86%E7%BA%A7)/" itemprop="url">
-            <span itemprop="name">Multisim安装(保姆级)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-03-28T02:08:06+08:00"
-              content="2022-03-28">
-          03-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/28/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-23T00:41:18+08:00"
-              content="2022-02-23">
-          02-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/23/Latex/" itemprop="url">
-            <span itemprop="name">Some tips you should know in Latex</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+        </div>
     </div>
   </div>
-  
-  
-  
 
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/useful/" rel="tag"><i class="fa fa-tag"></i> useful</a>
+              <a href="/tags/ssh/" rel="tag"><i class="fa fa-tag"></i> ssh</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/28/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" rel="prev" title="居家必备奇技淫巧">
+      <i class="fa fa-chevron-left"></i> 居家必备奇技淫巧
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -471,6 +439,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">SSH 概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">SSH 的一些配置记录和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">config</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
