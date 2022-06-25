@@ -289,19 +289,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1><span id="changes-in-ubuntu">Changes in Ubuntu</span><a href="#changes-in-ubuntu" class="header-anchor">#</a></h1><h2><span id="gai-bian-terminal-de-yan-se-she-zhi">改变terminal的颜色设置</span><a href="#gai-bian-terminal-de-yan-se-she-zhi" class="header-anchor">#</a></h2><p><a target="_blank" rel="noopener" href="https://vitux.com/how-to-customize-ubuntu-bash-prompt/">How to Customize your Ubuntu Terminal Prompt</a></p>
+        <h1 id="changes-in-ubuntu"><a href="#Changes-in-Ubuntu" class="headerlink" title="Changes in Ubuntu"></a>Changes in Ubuntu<a href="#changes-in-ubuntu" class="header-anchor">#</a></h1><h2 id="gai-bian-terminal-de-yan-se-she-zhi"><a href="#改变terminal的颜色设置" class="headerlink" title="改变terminal的颜色设置"></a>改变terminal的颜色设置<a href="#gai-bian-terminal-de-yan-se-she-zhi" class="header-anchor">#</a></h2><p><a target="_blank" rel="noopener" href="https://vitux.com/how-to-customize-ubuntu-bash-prompt/">How to Customize your Ubuntu Terminal Prompt</a></p>
 <p>通过以上链接改变了prompts的字体颜色，由绿色改为蓝色，将PS1中的\u前的中括号内的32（绿色）改为34（蓝色）</p>
 <img src="https://s2.loli.net/2022/04/08/YJytekO1lUCnpAf.png" alt="image-20220408020417360">
 
-<h2><span id="aptitude">aptitude</span><a href="#aptitude" class="header-anchor">#</a></h2><p>2022年3月5日，12点04分</p>
+<h2 id="aptitude"><a href="#aptitude" class="headerlink" title="aptitude"></a>aptitude<a href="#aptitude" class="header-anchor">#</a></h2><p>2022年3月5日，12点04分</p>
 <p><code>sudo apt install aptitude</code> 下载安装了aptitude包管理工具</p>
 <p>aptitude 相比apt拥有一个图形化界面，更加友好，且能直接显示已安装的包，未安装的包，待升级的包的数量。</p>
-<h2><span id="vim-themes">vim themes</span><a href="#vim-themes" class="header-anchor">#</a></h2><p>我突然想配置我的Vim的界面，于是我在下面链接找到教程</p>
+<h2 id="vim-themes"><a href="#vim-themes" class="headerlink" title="vim themes"></a>vim themes<a href="#vim-themes" class="header-anchor">#</a></h2><p>我突然想配置我的Vim的界面，于是我在下面链接找到教程</p>
 <p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/">Vimrc Configuration Guide - How to Customize Your Vim Code Editor with Mappings, Vimscript, Status Line, and More</a></p>
-<h1><span id="sshd-config">sshd_config</span><a href="#sshd-config" class="header-anchor">#</a></h1><p>修改sshd_config文件，修改后结果在下一页中</p>
+<h1 id="sshd-config"><a href="#sshd-config" class="headerlink" title="sshd_config"></a>sshd_config<a href="#sshd-config" class="header-anchor">#</a></h1><p>修改sshd_config文件，修改后结果在下一页中</p>
 <p><a href="https://pezayo.com/2022/04/08/Changes%20in%20Ubuntu/sshd_confi%20c24b2/">sshd_config</a></p>
 <p>除此之外，还需要运行<code>sudo service sshd restart</code> 将ssh服务重新配置。</p>
-<h2><span id="wang-luo-wen-ti">网络问题</span><a href="#wang-luo-wen-ti" class="header-anchor">#</a></h2><p>虚拟机网络出现大问题，使用NAT，桥接，hostonly都出现问题。反应为使用以下命令没有用。都显示Unit networking.service not found. 以下命令全部没用。以下命令均为从英文网站中找到的命令，检索信息为***.service not found</p>
+<h2 id="wang-luo-wen-ti"><a href="#网络问题" class="headerlink" title="网络问题"></a>网络问题<a href="#wang-luo-wen-ti" class="header-anchor">#</a></h2><p>虚拟机网络出现大问题，使用NAT，桥接，hostonly都出现问题。反应为使用以下命令没有用。都显示Unit networking.service not found. 以下命令全部没用。以下命令均为从英文网站中找到的命令，检索信息为***.service not found</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart networking</span><br><span class="line">systemctl start NetworkManager</span><br><span class="line">systemctl <span class="built_in">enable</span> NetworkManager</span><br><span class="line">service network restart</span><br><span class="line">sudo service network-manager stop</span><br></pre></td></tr></table></figure>
 
 <p>除此之外，我还有去按照那些英文教程去改配置文件，表现为以下几个文件</p>
@@ -457,7 +457,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Changes in Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">改变terminal的颜色设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">aptitude</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">vim themes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">sshd_config</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">网络问题</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#changes-in-ubuntu"><span class="nav-number">1.</span> <span class="nav-text">Changes in Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gai-bian-terminal-de-yan-se-she-zhi"><span class="nav-number">1.1.</span> <span class="nav-text">改变terminal的颜色设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#aptitude"><span class="nav-number">1.2.</span> <span class="nav-text">aptitude</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-themes"><span class="nav-number">1.3.</span> <span class="nav-text">vim themes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sshd-config"><span class="nav-number">2.</span> <span class="nav-text">sshd_config</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wang-luo-wen-ti"><span class="nav-number">2.1.</span> <span class="nav-text">网络问题</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

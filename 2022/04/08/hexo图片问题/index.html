@@ -294,7 +294,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1><span id="hexo-de-tu-pian-cha-ru-wen-ti">hexo 的图片插入问题</span><a href="#hexo-de-tu-pian-cha-ru-wen-ti" class="header-anchor">#</a></h1><p>关于hexo中的图片插入还是比较迷。首先markdown的插入图片是绝对万能的。适用于博客上图片插入的markdown语法便是使用网图进行插入。下面这个便是一个网图的案例</p>
+        <h1 id="hexo-de-tu-pian-cha-ru-wen-ti"><a href="#hexo-的图片插入问题" class="headerlink" title="hexo 的图片插入问题"></a>hexo 的图片插入问题<a href="#hexo-de-tu-pian-cha-ru-wen-ti" class="header-anchor">#</a></h1><p>关于hexo中的图片插入还是比较迷。首先markdown的插入图片是绝对万能的。适用于博客上图片插入的markdown语法便是使用网图进行插入。下面这个便是一个网图的案例</p>
 <p><img src="https://s2.loli.net/2022/04/08/lITCRnEyHS3Feoc.png" alt="这是smms图床的网图"></p>
 <p>好，除此之外，hexo还支持一些奇技淫巧的图片插入方法。其实也是我一直想要探究的如何将自己的图片托管的博客上，而不是在每次使用Typora插入图片自动使用图床上传生成一个随机url，使用博客进行 托管，那个url自然有规则一点，并且还可看出这张图片属于我。</p>
 <p>关于这种图片的插入。目前发现的方法是使用hexo支持的标签语法。<code>&#123;% img /your-image.png the-description %&#125;</code>当然还有一些其他复杂的参数，比如高度宽度啥的，不过这都是次要的。其中那个图片前面的正斜杠是必要的。当然这一切都需要一个前提条件，就是你需要在hexo站点配置文件_config.yml中将<code>post_asset_folder</code>的选项设置为<code>true</code>。然后每次在git bash命令行中去<code>hexo new article-name</code>新建一个文件时，其又会自动新建一个同名文件夹。同名文件夹中的图片可被这篇markdown读取，目前测试的是使用这个hexo语法标签才能引用到。然后我发现到的是，每次这样，在提交完后，进入github的部署文件中，发现其中的html文件与图片其实在一起，都在那个文件夹下。以下就是这个图片的hexo语法展示结果，显然这张图片在博客中可以看到，但在本地markdown编辑器中无法显示，</p>
@@ -441,7 +441,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">hexo 的图片插入问题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-de-tu-pian-cha-ru-wen-ti"><span class="nav-number">1.</span> <span class="nav-text">hexo 的图片插入问题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
