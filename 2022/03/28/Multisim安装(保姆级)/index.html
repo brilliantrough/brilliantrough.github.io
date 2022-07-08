@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://s2.loli.net/2022/02/14/4jLAScqsDmKNx7z.png">
 <meta property="og:image" content="https://s2.loli.net/2022/02/14/3tSbPT4ZFpu9Wlh.png">
 <meta property="article:published_time" content="2022-03-28T06:23:14.295Z">
-<meta property="article:modified_time" content="2022-05-29T05:33:44.885Z">
+<meta property="article:modified_time" content="2022-07-08T17:12:57.015Z">
 <meta property="article:author" content="pezayo">
 <meta property="article:tag" content="install software">
 <meta name="twitter:card" content="summary">
@@ -239,7 +239,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-29 13:33:44" itemprop="dateModified" datetime="2022-05-29T13:33:44+08:00">2022-05-29</time>
+                <time title="修改时间：2022-07-09 01:12:57" itemprop="dateModified" datetime="2022-07-09T01:12:57+08:00">2022-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,7 +278,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -326,12 +326,20 @@
 <p>Multisim模电，数电实验课程都需要使用（工作量极大），但仅仅是基础课程，用来学习时使用的，后面貌似就不怎么使用了。然而除了使用，这玩意还安装起来贼能治低血压。（因为大家都说重装能解决多少多少问题，操作系统都能重装解决问题，但是这个玩意重装却能衍生问题）</p>
 <p><em><strong>以下很重要（very very and very zhongyao）</strong></em></p>
 <p>目前为止，<strong>强烈建议大家安装Mulitisim14.2教育版</strong>，其他的版本（包括专业版，就是pro版本）根本没有安装的必要（假如你是正正经经上实验课，不乱搞事，比如自己用软件研发一些东西啊，咋的咋的）。模电课程什么版本不重要，数电课程<strong>必须要教育版</strong>，只有教育版才有必须的PLD模块。并且14.2版本可以联动较新的vivado（2019）。</p>
+<blockquote>
+<p>于 22 年暑期更新，目前 Multisim 已经更新到14.3版本了，这个版本是否能够使用 activator 进行激活尚未测试，喜欢整活的朋友可以试一下。<strong>但就教学来看，14.2 肯定完全够用。</strong>另外我还在官网发现了 NI 公司已经推出了<a target="_blank" rel="noopener" href="https://www.ni.com/zh-cn/support/downloads/software-products/download.academic-volume-license.html#312332">院校批量许可证 </a> ，大家觉得有必要可以考虑叫学校进行购买。（别想啦，不可能哒）</p>
+</blockquote>
 <ol>
 <li>假如你对自己电脑下载软件存储比较注意的话，比如你会刻意把软件路径改到D盘而不是默认的C盘，好，那么我<strong>建议</strong>你把Multisim安装到C盘，并且是默认安装，不要去手动更改路径。原因很简单，反正你C盘也空着的，Multisim这玩意也不大，1个G都没有，放C盘就放C盘呗。</li>
 <li>假如你是另一类型的，日常喜欢无脑安装的，导致C盘红掉并且经常很狼狈的去C盘删文件腾空间的类型。那么，很好，我建议你也把Multisim安装到C盘，并且也是默认安装。原因很简单，你本来就是喜欢这么做，谁也拦不住你啊。[&#x2F;滑稽保命]</li>
 </ol>
 <p>说了这么多，其实就是<strong>把Multisim放C盘</strong>，好处只有一个，可以后台调用vivado<em><strong>（关于vivado的调用存在错误，应该是vivado装在C盘才可被Multisim识别调用，至于Multisim的安装位置没有强制要求，但为了省去不必要的麻烦还请按照本文档说明的来最好）</strong></em>可以<strong>震惊小伙伴们</strong>（哇塞！你的电脑自己就可以做数电实验了耶！）实验室电脑相对比较<strong>差劲</strong>，用自己的电脑做比较省事，并且免去到时候要去借别人U盘拷你电脑上的仿真文件到实验室电脑上的繁琐流程了。（社恐人狂喜）</p>
-<h3 id="zheng-pian-zhen-de-kai-shi-liao"><a href="#正片真的开始了" class="headerlink" title="正片真的开始了"></a>正片真的开始了<a href="#zheng-pian-zhen-de-kai-shi-liao" class="header-anchor">#</a></h3><ol>
+<h3 id="zheng-pian-zhen-de-kai-shi-liao"><a href="#正片真的开始了" class="headerlink" title="正片真的开始了"></a>正片真的开始了<a href="#zheng-pian-zhen-de-kai-shi-liao" class="header-anchor">#</a></h3><blockquote>
+<p>环境：Windows10系统（Windows11尚未测试）</p>
+<p>容量：小于 1G 即可</p>
+<p>注意：如果你是 Mac 用户，那么你很不幸，Mac 并不支持Multisim的安装，会因为 ARM 架构的原因，哪怕使用虚拟机装个 Win10 都不行。<strong>所以不建议像电子这种专业的同学使用 Mac，很多工程软件并未提供对 Mac 的接口。</strong></p>
+</blockquote>
+<ol>
 <li>假如你此前没有安装过Multisim的话，那么恭喜你荣膺<strong>“电脑目前为止还很干净”</strong>称号。请看<a href="#here">这里</a></li>
 <li>假如你此前安装过Multisim（不论成功与否，只要你双击过安装程序且安装程序开始进行了）的话，想要切换成教育版版本但是安装失败，或者就是安装失败，那么恭喜你荣膺<strong>“电脑目前为止还有救”</strong>称号。可以看<a href="#there">那里</a>。</li>
 </ol>
@@ -364,7 +372,7 @@
 <p>祝大家数电，模电实验Multisim使用愉快！祝大家学业进步！</p>
 <p>如果大家还遇到什么问题，可以发邮件给我，我看到了会及时进行回复的。</p>
 <p>假如想要我联系方式的，也可以发邮箱给我，我会回复我的QQ和微信的。</p>
-<p>这是我的南大邮箱：<a href="mailto:&#50;&#48;&#x31;&#49;&#56;&#x30;&#48;&#x37;&#x30;&#x40;&#115;&#x6d;&#97;&#105;&#108;&#46;&#x6e;&#106;&#x75;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#x6e;">&#50;&#48;&#x31;&#49;&#56;&#x30;&#48;&#x37;&#x30;&#x40;&#115;&#x6d;&#97;&#105;&#108;&#46;&#x6e;&#106;&#x75;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#x6e;</a></p>
+<p>这是我的南大邮箱：<a href="mailto:&#50;&#48;&#x31;&#49;&#56;&#48;&#x30;&#55;&#48;&#x40;&#115;&#x6d;&#x61;&#x69;&#108;&#x2e;&#110;&#106;&#x75;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;">&#50;&#48;&#x31;&#49;&#56;&#48;&#x30;&#55;&#48;&#x40;&#115;&#x6d;&#x61;&#x69;&#108;&#x2e;&#110;&#106;&#x75;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;</a></p>
 
     </div>
 
@@ -587,7 +595,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">20 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
 </div>
 
 
