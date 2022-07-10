@@ -23,19 +23,21 @@
     var CONFIG = {"hostname":"pezayo.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="博客介绍#本博客由 @pezayo 在2022年3月28日搭建。使用的网上非常流行 hexo 框架，使用的主题是 next 。 本博客之所以搭建，是因为作者本人平日总会突发奇想的去整活，风风火火的整了一通后，总是会忘了记录，类似于代码不写注释一样。于是下次再来的时候又得从头开始。所以作者本人开始养成了遇事记录的“好习惯”。而作者采用的记录方式便是 markdown，有关于各种软件层面的记录比如 p">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://pezayo.com/about/index.html">
+  <meta name="description" content="CLion-STM32-OpenOCD配置# 这个配置，恕我直言，真的过于阴间。这个 的配置前前后后我不知道配了多久，对着网上的教程进行配置。这里我将其记录下来，然后说出我的一些经验怪谈。  配置这个东西，首先你随便上网一查都能看到需要下载 CLion（收费，但是学生免费），STM32CubeMX，以及OpenOCD。然后你还需要 gcc-arm-mingw。 OpenOCD#直接搜索下载安装即可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CLion-STM32开发">
+<meta property="og:url" content="https://pezayo.com/2022/07/10/CLion-STM32%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="pezayo&#39;s Blog">
-<meta property="og:description" content="博客介绍#本博客由 @pezayo 在2022年3月28日搭建。使用的网上非常流行 hexo 框架，使用的主题是 next 。 本博客之所以搭建，是因为作者本人平日总会突发奇想的去整活，风风火火的整了一通后，总是会忘了记录，类似于代码不写注释一样。于是下次再来的时候又得从头开始。所以作者本人开始养成了遇事记录的“好习惯”。而作者采用的记录方式便是 markdown，有关于各种软件层面的记录比如 p">
+<meta property="og:description" content="CLion-STM32-OpenOCD配置# 这个配置，恕我直言，真的过于阴间。这个 的配置前前后后我不知道配了多久，对着网上的教程进行配置。这里我将其记录下来，然后说出我的一些经验怪谈。  配置这个东西，首先你随便上网一查都能看到需要下载 CLion（收费，但是学生免费），STM32CubeMX，以及OpenOCD。然后你还需要 gcc-arm-mingw。 OpenOCD#直接搜索下载安装即可">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-28T02:55:48.000Z">
-<meta property="article:modified_time" content="2022-06-25T14:08:16.721Z">
+<meta property="article:published_time" content="2022-07-10T15:41:54.000Z">
+<meta property="article:modified_time" content="2022-07-10T16:21:58.685Z">
 <meta property="article:author" content="pezayo">
+<meta property="article:tag" content="STM32">
+<meta property="article:tag" content="CLion">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://pezayo.com/about/">
+<link rel="canonical" href="https://pezayo.com/2022/07/10/CLion-STM32%E5%BC%80%E5%8F%91/">
 
 
 <script id="page-configurations">
@@ -43,13 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>about | pezayo's Blog
-</title>
+  <title>CLion-STM32开发 | pezayo's Blog</title>
   
 
 
@@ -198,57 +199,205 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">about
-</h1>
-
-<div class="post-meta">
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pezayo.com/2022/07/10/CLion-STM32%E5%BC%80%E5%8F%91/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/classic.jpg">
+      <meta itemprop="name" content="pezayo">
+      <meta itemprop="description" content="坚持，马上开始博客之旅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pezayo's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CLion-STM32开发
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-07-10 23:41:54" itemprop="dateCreated datePublished" datetime="2022-07-10T23:41:54+08:00">2022-07-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-11 00:21:58" itemprop="dateModified" datetime="2022-07-11T00:21:58+08:00">2022-07-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/07/10/CLion-STM32%E5%BC%80%E5%8F%91/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/07/10/CLion-STM32%E5%BC%80%E5%8F%91/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="clion-stm32-openocd-pei-zhi"><a href="#CLion-STM32-OpenOCD配置" class="headerlink" title="CLion-STM32-OpenOCD配置"></a>CLion-STM32-OpenOCD配置<a href="#clion-stm32-openocd-pei-zhi" class="header-anchor">#</a></h1><blockquote>
+<p>这个配置，恕我直言，真的过于阴间。这个 的配置前前后后我不知道配了多久，对着网上的教程进行配置。这里我将其记录下来，然后说出我的一些经验怪谈。</p>
+</blockquote>
+<p>配置这个东西，首先你随便上网一查都能看到需要下载 CLion（收费，但是学生免费），STM32CubeMX，以及OpenOCD。然后你还需要 gcc-arm-mingw。</p>
+<h2 id="openocd"><a href="#OpenOCD" class="headerlink" title="OpenOCD"></a>OpenOCD<a href="#openocd" class="header-anchor">#</a></h2><p>直接搜索下载安装即可，然后假如环境变量即可。</p>
+<h2 id="stm32cubemx"><a href="#STM32CubeMX" class="headerlink" title="STM32CubeMX"></a>STM32CubeMX<a href="#stm32cubemx" class="header-anchor">#</a></h2><p>也是直接下载安装即可，至于要不要导入软件包倒也无所谓，因为在你实现工程的时候，自然而然会给你下载所需要的包。提前装好也不失为一种好的省事的选择。至于如何提前导入包直接百度即可。</p>
+<h2 id="arm-none-eabi-gcc-g"><a href="#arm-none-eabi-gcc-g-…" class="headerlink" title="arm-none-eabi-gcc(g++ …)"></a>arm-none-eabi-gcc(g++ …)<a href="#arm-none-eabi-gcc-g" class="header-anchor">#</a></h2><p>这个下载也是直接搜索下载安装即可，然后加入环境变量</p>
+<h2 id="pei-zhi-huan-jie"><a href="#配置环节" class="headerlink" title="配置环节"></a>配置环节<a href="#pei-zhi-huan-jie" class="header-anchor">#</a></h2><p>首先直接按照网上的各种教程将 STM32CubeMX 和 OpenOCD 都加入到 CLion 的配置里面。然后点击 test 看看是否可以识别成功。</p>
+<p>然后可以在 CLion 的设置里面新建一个工具链其中使用之前所提到的 arm-none-eabi-gcc 和 arm-none-eabi-gdb，不过对于这里，我还是存在疑问，是否应该这样做？还是说有其他的做法，还是这种做法没什么用。因为我看到网上也是各种参差不齐的说法，也有说不用这个 gdb 直接用 bundled gdb 就行的，看得我也晕了。。。</p>
+<p>但就我自己的体验而言，好像这都没什么大用。我甚至都用的是 ninja。程序也能跑起来，就没管了。所以重点还是在后面怎么无脑的机械式的生成能跑，只管自己编写逻辑代码的工程。</p>
+<h2 id="chuang-jian-yi-ge-neng-pao-de-gong-cheng"><a href="#创建一个能跑的工程" class="headerlink" title="创建一个能跑的工程"></a>创建一个能跑的工程<a href="#chuang-jian-yi-ge-neng-pao-de-gong-cheng" class="header-anchor">#</a></h2><p>直接 CLion 中新建一个工程，起一个名字，便是新建了一个 文件夹。创建的过程中肯定是选择 STM32 的那个选项啦。</p>
+<p>然后 CLion 会自动生成一个同样工程名的 .ioc 文件，这个文件是用 STM32CubeMX 来打开编辑的。你直接选中然后用 STM32CubeMX 打开就行了，然后进行属于 STM32CubeMX 的操作环节就可以了。这里最后会有一个文件夹和名字的设置，加入这里自己又设置了其他名字，最后这个 .ioc 文件的名称会被这个覆盖，变成这个名字，不过也没什么大碍。</p>
+<p>这里一定要选择 STM32CubeIDE 的模式，不能选择 MDK-ARM 的模式，不然就变成了 Keil 了。然后生成，也就是 generate code，生成好后，会出现 Core 和 Drivers的文件夹以及其他的一些文件。</p>
+<p>回到 CLion，他会要你选择一个 cfg，这里的 cfg，我看网上说的，各个都说的轻飘飘的。我也看的云里雾里，不清楚。反正他们的意思是这个文件并不太重要。然而事实也确实是如此。我们只需要关注文件里的两个，一个是 Interface 下的调试器。像我用的是 stlink，所以里面的就是 <code>source [find interface/stlink.cfg]</code>，不得不说，stlink 这个调试器是真的无脑，而且下载速度快。除此之外还有一个 target 里面的文件，叫你选择一个单片机处理器相关的文件。直接看型号就行。像我用的探索者板子，芯片是 stm32f407ZGT6，所以这里的配置就是<code>source [find target/stm32f4x.cfg]</code></p>
+<p>当然上面这么多，都不是自己配的，我就是直接在回到 CLion 的界面中选择了 stm32f4discovery.cfg 的选项就可以了。里面就已经有这两行给你配好了。也就是说不用自己再去配了。</p>
+<p><strong>这里最神奇</strong>，也就是说，从开始创建工程到现在，没有自己额外再去配的部分了，都是直接选择。到了这里，那个编译选项，工具链那个地方（就是 CLion 右上角的图标）自然而然就有了一个锤子样的符号（Build）和 OpenOCD 的一个 configuration ，并且 run 和 debug 都是亮着的，说明是可以直接点击开始跑的。这时候你再点开 Edit configuration ，你就能看到里面已经给你配好了，也就是说，这里好像和你之前的那个配置工具链没有什么关系。所以这里我自己也不太清晰，但是程序能跑就行。</p>
+<p>这里你再点击编译，点击下载，就能成功下载了。至此，我们也就云里雾里的成功配置好，并且程序能跑了。</p>
+<h2 id="gong-cheng-yi-zhi"><a href="#工程移植" class="headerlink" title="工程移植"></a>工程移植<a href="#gong-cheng-yi-zhi" class="header-anchor">#</a></h2><p>工程移植还是比较麻烦的。直接复制粘贴会出现我的配置文件选用的是原来文件夹里的。然后经过一番倒腾，我发现了一个能行的通的方法。</p>
+<p>首先不能直接复制工程，不然后面会很混乱，到底哪个是哪个工程的配置。我们这里应该要新建一个工程，自己取名字等等。</p>
+<p>然后新建完一个工程后他会叫你打开并编辑 .ioc 文件，这里就不急，直接把他生成的这个给删掉，然后从原来的工程里把那个复制过来，注意，建议把这个 .ioc 文件名字改成现在工程的名字。不然又乱了。。。。</p>
+<p>注意这里很重要，现在要直接用这个文件生成代码，不能直接把代码从原来的工程搬过来。一定要自己这边先生成空的模板代码。</p>
+<p>生成完模板代码后，再把原来工程中带有我们的编写信息的代码文件，比如 main.c，maic.h以及其他我们自己的写的头文件和源文件。仅仅把这些我们自己写的文件移植过来。</p>
+<p>这时候我们还需要取重新加载这个 CMake 工程。右键 CLion 中的工程文件夹就有这个选项了。</p>
+<p>这时候，进行编译，并且进行下载，就能正常下载程序了。</p>
+<p>大功告成！</p>
+
+    </div>
+
+    
+    
+    
+
+    
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>pezayo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://pezayo.com/2022/07/10/CLion-STM32%E5%BC%80%E5%8F%91/" title="CLion-STM32开发">https://pezayo.com/2022/07/10/CLion-STM32开发/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-</header>
+        
 
-      
-      
-      
-      <div class="post-body">
-          <h1 id="bo-ke-jie-shao"><a href="#博客介绍" class="headerlink" title="博客介绍"></a>博客介绍<a href="#bo-ke-jie-shao" class="header-anchor">#</a></h1><p>本博客由 @pezayo 在2022年3月28日搭建。使用的网上非常流行 hexo 框架，使用的主题是 next 。</p>
-<p>本博客之所以搭建，是因为作者本人平日总会突发奇想的去整活，风风火火的整了一通后，总是会忘了记录，类似于代码不写注释一样。于是下次再来的时候又得从头开始。所以作者本人开始养成了遇事记录的“好习惯”。而作者采用的记录方式便是 markdown，有关于各种软件层面的记录比如 python，pycharm，vscode，Altium Designer等。</p>
-<p>后来作者还觉得不过瘾，以及作者在平时与他人接触的过程中，慢慢发现了身边许多人都拥有自己的博客。于是作者想着什么时候也能有自己的博客。心动不如行动，但此“大项目”一直因为无聊又恼人的作业，任务，以及其他项目被搁置。</p>
-<p>终于作者在这么一个风雨交加的夜晚，在室友熟睡（刷视频？）之际晚上开始了自己的博客搭建，照着知乎上的简易教程，开始了自己的博客之旅。</p>
-<h1 id="yu-ming"><a href="#域名" class="headerlink" title="域名"></a>域名<a href="#yu-ming" class="header-anchor">#</a></h1><p>此域名 pezayo.com 由作者在阿里以一年60人民币的价格购买。此博客托管在 github 上，将 github 上的工程重定向到这个网址。</p>
-<h1 id="tou-xiang"><a href="#头像" class="headerlink" title="头像"></a>头像<a href="#tou-xiang" class="header-anchor">#</a></h1><p>头像在多方打听询问后，作者决定还是采用自己的老式头像。最初作者采用的是 Microsoft Visual Studio 提供的一个少女头像，但是由于比例问题，这个不是一个正方形，导致呈现在博客上头像被纵向拉长。觉得膈应，又换成了自己原先的头像。</p>
-<h1 id="you-lian"><a href="#友链" class="headerlink" title="友链"></a>友链<a href="#you-lian" class="header-anchor">#</a></h1><p>暂时还没有向身边大佬申请建立友情链接。暂时将友链选定为作者常用且吹爆的 Stack Overflow，以及另一个某链接。</p>
-<h1 id="rss-ding-yue"><a href="#RSS-订阅" class="headerlink" title="RSS 订阅"></a>RSS 订阅<a href="#rss-ding-yue" class="header-anchor">#</a></h1><p>限于作者水平问题，还没有开启 RSS 订阅服务。博客中显示的一个RSS的选项按钮，实则指向一个空地址。等作者日后水平有机会得以提升后，再与之一战。</p>
-<p>看过其他大佬的 RSS 订阅功能，看着就感觉复杂，外加作者本身又非常忙，也抽不出空来，就搁置了。</p>
-<h1 id="bei-jing-xuan-qu"><a href="#背景选取" class="headerlink" title="背景选取"></a>背景选取<a href="#bei-jing-xuan-qu" class="header-anchor">#</a></h1><p>背景为作者去了专门提供图片的网站， <a target="_blank" rel="noopener" href="https://colorhub.me/">colorhub.me</a> 去寻找的一个外太空卫星的图片。因为作者对这种外太空卫星很着迷，觉得很有一种科幻感。浪漫~~</p>
-<p>但是也没有找到其他适合的背景了。</p>
-<h1 id="fen-lei"><a href="#分类" class="headerlink" title="分类"></a>分类<a href="#fen-lei" class="header-anchor">#</a></h1><p>有关于博客文章的分类，作者并没有做的很系统。以及到底在上传哪些文本到博客上，作者也没去认真规划过。</p>
-<p>就目前而言，作者一直在博客上写一些技术方面的文章，主要偏向软件方向。至于后来是否会上传一些心得感悟，社会，生活方面的文章还有待斟酌。或许这可以另开一个公众号来进行记录。</p>
-<h1 id="biao-qian"><a href="#标签" class="headerlink" title="标签"></a>标签<a href="#biao-qian" class="header-anchor">#</a></h1><p>有关标签的选取更是随意。没有固定的标签。在写文本的时候想到什么就贴什么标签。至于贴了多少个标签，作者也不知道了。甚至会有把标签与分类混淆的时候。</p>
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-      </div>
-      
-      
-      
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
     </div>
-    
+  </div>
 
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/STM32/" rel="tag"><i class="fa fa-tag"></i> STM32</a>
+              <a href="/tags/CLion/" rel="tag"><i class="fa fa-tag"></i> CLion</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/06/25/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/" rel="prev" title="本博客配置记录">
+      <i class="fa fa-chevron-left"></i> 本博客配置记录
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -300,7 +449,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#bo-ke-jie-shao"><span class="nav-number">1.</span> <span class="nav-text">博客介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#yu-ming"><span class="nav-number">2.</span> <span class="nav-text">域名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tou-xiang"><span class="nav-number">3.</span> <span class="nav-text">头像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#you-lian"><span class="nav-number">4.</span> <span class="nav-text">友链</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rss-ding-yue"><span class="nav-number">5.</span> <span class="nav-text">RSS 订阅</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bei-jing-xuan-qu"><span class="nav-number">6.</span> <span class="nav-text">背景选取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fen-lei"><span class="nav-number">7.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#biao-qian"><span class="nav-number">8.</span> <span class="nav-text">标签</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#clion-stm32-openocd-pei-zhi"><span class="nav-number">1.</span> <span class="nav-text">CLion-STM32-OpenOCD配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#openocd"><span class="nav-number">1.1.</span> <span class="nav-text">OpenOCD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32cubemx"><span class="nav-number">1.2.</span> <span class="nav-text">STM32CubeMX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arm-none-eabi-gcc-g"><span class="nav-number">1.3.</span> <span class="nav-text">arm-none-eabi-gcc(g++ …)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pei-zhi-huan-jie"><span class="nav-number">1.4.</span> <span class="nav-text">配置环节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chuang-jian-yi-ge-neng-pao-de-gong-cheng"><span class="nav-number">1.5.</span> <span class="nav-text">创建一个能跑的工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gong-cheng-yi-zhi"><span class="nav-number">1.6.</span> <span class="nav-text">工程移植</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
