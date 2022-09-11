@@ -23,17 +23,21 @@
     var CONFIG = {"hostname":"pezayo.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="坚持，马上开始博客之旅">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pezayo&#39;s Blog">
-<meta property="og:url" content="https://pezayo.com/archives/2022/05/index.html">
+  <meta name="description" content="介绍#rime 是一个相对来说比较好用的输入法（就我自己看来，虽然说也有其他大佬觉得这个已经是很久以前的了，并不值得现在进行提倡） 就我个人而言我都是用他来实现双拼和全拼的使用。一般来说 Windows 上的双拼可以直接使用微软输入法进行实现，直接改注册表即可，方便又简单 而 rime 的实现则就相对复杂起来了，需要一些配置文件。 文件#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rime double_pinyin_fly with fcitx in Ubuntu">
+<meta property="og:url" content="https://pezayo.com/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/index.html">
 <meta property="og:site_name" content="pezayo&#39;s Blog">
-<meta property="og:description" content="坚持，马上开始博客之旅">
+<meta property="og:description" content="介绍#rime 是一个相对来说比较好用的输入法（就我自己看来，虽然说也有其他大佬觉得这个已经是很久以前的了，并不值得现在进行提倡） 就我个人而言我都是用他来实现双拼和全拼的使用。一般来说 Windows 上的双拼可以直接使用微软输入法进行实现，直接改注册表即可，方便又简单 而 rime 的实现则就相对复杂起来了，需要一些配置文件。 文件#">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-11T13:38:36.000Z">
+<meta property="article:modified_time" content="2022-09-11T16:04:11.273Z">
 <meta property="article:author" content="pezayo">
+<meta property="article:tag" content="useful">
+<meta property="article:tag" content="input method">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://pezayo.com/archives/2022/05/">
+<link rel="canonical" href="https://pezayo.com/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/">
 
 
 <script id="page-configurations">
@@ -41,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | pezayo's Blog</title>
+  <title>rime double_pinyin_fly with fcitx in Ubuntu | pezayo's Blog</title>
   
 
 
@@ -196,76 +200,201 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pezayo.com/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/classic.jpg">
+      <meta itemprop="name" content="pezayo">
+      <meta itemprop="description" content="坚持，马上开始博客之旅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pezayo's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          rime double_pinyin_fly with fcitx in Ubuntu
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-11 21:38:36" itemprop="dateCreated datePublished" datetime="2022-09-11T21:38:36+08:00">2022-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-12 00:04:11" itemprop="dateModified" datetime="2022-09-12T00:04:11+08:00">2022-09-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 15 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <h1 id="jie-shao"><a href="#介绍" class="headerlink" title="介绍"></a>介绍<a href="#jie-shao" class="header-anchor">#</a></h1><p>rime 是一个相对来说比较好用的输入法（就我自己看来，虽然说也有其他大佬觉得这个已经是很久以前的了，并不值得现在进行提倡）</p>
+<p>就我个人而言我都是用他来实现双拼和全拼的使用。一般来说 Windows 上的双拼可以直接使用微软输入法进行实现，直接改注册表即可，方便又简单</p>
+<p>而 rime 的实现则就相对复杂起来了，需要一些配置文件。</p>
+<h1 id="wen-jian"><a href="#文件" class="headerlink" title="文件"></a>文件<a href="#wen-jian" class="header-anchor">#</a></h1><h2 id="default-yaml"><a href="#default-yaml" class="headerlink" title="default.yaml"></a>default.yaml<a href="#default-yaml" class="header-anchor">#</a></h2><p>这个文件是 rime 的默认配置，里面记录着其自带的所有的输入法，这就是为什么刚用 rime 时会有那么多方案选项。这个文件一般位于 build 文件夹中，Windows 和 Ubuntu 下都是如此。</p>
+<p><em><strong>但这里有一点很重要</strong></em>，就是在 Ubuntu（22.04LTS） 下，使用的是 fcitx5-rime 的时候，这个文件在 <code>/usr/share/rime-data/</code>和 <code>~/.local/share/fcitx5/rime/build</code> 中各有一份。</p>
+<h2 id="default-custom-yaml"><a href="#default-custom-yaml" class="headerlink" title="default.custom.yaml"></a>default.custom.yaml<a href="#default-custom-yaml" class="header-anchor">#</a></h2><p>这个文件也是配置文件，与上面不同的是，一般认定（其实不用遵守也行）不篡改默认配置文件，如果想要自定义即可在这个文件中进行修改，这个文件里面的配置具有更高的优先级，可以覆盖上面的相同的配置。这个文件的位置有讲究，不能随便在一个文件夹中创建，否则将部署失败。</p>
+<blockquote>
+<p> <strong>default.custom 里必须要写 patch 表示是上面文件的补丁才行，不然无效。</strong></p>
+</blockquote>
+<h1 id="ju-ti-bu-shu-gui-ze"><a href="#具体部署规则" class="headerlink" title="具体部署规则"></a>具体部署规则<a href="#ju-ti-bu-shu-gui-ze" class="header-anchor">#</a></h1><p>这里以 fcitx5-rime 为例（事实上 ），具体的部署规则是这样的，在<code>/usr/share/rime-data/</code>中有着其原始的数据，即使用apt下载时就是直接解压到了这个位置，当然不同系统apt下载解压的位置可能不一样，但我们就是认这个apt的源文件解压位置。这里还有个build文件夹，在这个文件夹中有着几乎所有的输入法的.bin .txt .yaml 配置文件和执行程序以及词典。<strong>当然像双拼这种应该还需要另外进行下载，使用 <code>sudo apt install rime-data-doublepin </code>即可，同样是会解压在这个位置。</strong></p>
+<p>只有这里建立的 default.custom.yaml 才会有效，而在~&#x2F;.local&#x2F;share&#x2F;fcitx5&#x2F;rime&#x2F;build这条路径下的，则没有这个效果。并且在.local 这个路径下的default更改也没用，因为每次部署时这个default本身时usr目录下的那个 default 和 default.custom 的叠加组合。</p>
+<p>另外我们还需要将usr路径下的相关文件复制过去，例如我要小鹤双拼，我就需要将这里的build文件夹下的（其中会有所有的输入法的相关文件）<code>double_pinyin_fly.schema.yaml</code> 和他的bin文件以及txt文件都复制到.local路径里的那个build目录下。</p>
+<p>所以我在 default.custom.yaml 里记录的是</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">patch:</span></span><br><span class="line">	<span class="attr">schema_list:</span></span><br><span class="line">		<span class="bullet">-</span> <span class="attr">schema:</span> <span class="string">double_pinyin_flypy</span></span><br><span class="line">		<span class="bullet">-</span> <span class="attr">schema:</span> <span class="string">luna_pinyin</span></span><br><span class="line">	<span class="attr">menu:</span></span><br><span class="line">		<span class="attr">page_size:</span> <span class="number">7</span></span><br></pre></td></tr></table></figure>
+
+<p>然后我将下面这些文件从 <code>/usr/share/rime-data/</code> 复制到 <code>~/.local/share/fcitx5/rime/build</code> 目录下，然后重新部署大功告成。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">double_pinyin_flypy.prism.bin</span><br><span class="line">double_pinyin_flypy.prism.txt</span><br><span class="line">double_pinyin_flypy.schema.yaml</span><br></pre></td></tr></table></figure>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-05-28T19:33:30+08:00"
-              content="2022-05-28">
-          05-28
-        </time>
-      </div>
+    
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+    
+        
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/05/28/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" itemprop="url">
-            <span itemprop="name">居家必备奇技淫巧</span>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>pezayo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://pezayo.com/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/" title="rime double_pinyin_fly with fcitx in Ubuntu">https://pezayo.com/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
           </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-05-28T18:58:09+08:00"
-              content="2022-05-28">
-          05-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/05/28/%E6%B2%A1%E6%9C%89%E4%BD%A0%EF%BC%88%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%89%E6%88%91%E6%80%8E%E4%B9%88%E6%B4%BB/" itemprop="url">
-            <span itemprop="name">没有你（快捷键）我怎么活</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+        </div>
     </div>
   </div>
-  
-  
-  
 
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/useful/" rel="tag"><i class="fa fa-tag"></i> useful</a>
+              <a href="/tags/input-method/" rel="tag"><i class="fa fa-tag"></i> input method</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/08/09/Qt-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" rel="prev" title="Qt 常用语法">
+      <i class="fa fa-chevron-left"></i> Qt 常用语法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -312,6 +441,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jie-shao"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wen-jian"><span class="nav-number">2.</span> <span class="nav-text">文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#default-yaml"><span class="nav-number">2.1.</span> <span class="nav-text">default.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#default-custom-yaml"><span class="nav-number">2.2.</span> <span class="nav-text">default.custom.yaml</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ju-ti-bu-shu-gui-ze"><span class="nav-number">3.</span> <span class="nav-text">具体部署规则</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
