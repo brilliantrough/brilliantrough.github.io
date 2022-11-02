@@ -23,21 +23,31 @@
     var CONFIG = {"hostname":"pezayo.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="some annoying details and some customize operation">
+  <meta name="description" content="Multisim Edu PLD 的使用# 之所以想要写这篇文档是因为有许多同学（包括我自己在内）都被误导，认为 Vivado 只能装在 C 盘内才可被 Multisim 识别。这在我之前的有关于 Multisim 的安装的文档中讲到过。其实装在 C 盘说可以让 Multisim 自动识别到 Vivado，我们其实可以手动指定 Vivado 的位置。这篇文档将会从 Multisim 进行 basy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Changes or configuration in Ubuntu">
-<meta property="og:url" content="https://pezayo.com/2022/04/08/Changes%20in%20Ubuntu/index.html">
+<meta property="og:title" content="pezayo&#39;s Blog">
+<meta property="og:url" content="https://pezayo.com/2022/11/02/Multisim%20Edu%20PLD%20%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="pezayo&#39;s Blog">
-<meta property="og:description" content="some annoying details and some customize operation">
+<meta property="og:description" content="Multisim Edu PLD 的使用# 之所以想要写这篇文档是因为有许多同学（包括我自己在内）都被误导，认为 Vivado 只能装在 C 盘内才可被 Multisim 识别。这在我之前的有关于 Multisim 的安装的文档中讲到过。其实装在 C 盘说可以让 Multisim 自动识别到 Vivado，我们其实可以手动指定 Vivado 的位置。这篇文档将会从 Multisim 进行 basy">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2022/04/08/YJytekO1lUCnpAf.png">
-<meta property="article:published_time" content="2022-04-07T17:55:08.552Z">
-<meta property="article:modified_time" content="2022-09-30T15:25:38.983Z">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/Nq1bXaFWBpP2GTw.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/sxJlLH6GEVgcFfM.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/ZAirfIbPRUNXxeq.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/LvuF3Ph986NonH7.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/kOeaTB7DxU5o98b.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/JSNnliby9hmOEjM.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/m5HKDldrSphWMZx.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/Y3R82IeVqJ71xHS.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/ewTmrUEpkYOxzW3.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/wipsXJUnaSm5WyP.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/02/U29lLXJibvzaqf5.png">
+<meta property="article:published_time" content="2022-11-02T14:13:04.630Z">
+<meta property="article:modified_time" content="2022-11-02T14:12:33.561Z">
 <meta property="article:author" content="pezayo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2022/04/08/YJytekO1lUCnpAf.png">
+<meta name="twitter:image" content="https://s2.loli.net/2022/11/02/Nq1bXaFWBpP2GTw.png">
 
-<link rel="canonical" href="https://pezayo.com/2022/04/08/Changes%20in%20Ubuntu/">
+<link rel="canonical" href="https://pezayo.com/2022/11/02/Multisim%20Edu%20PLD%20%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -50,7 +60,7 @@
   };
 </script>
 
-  <title>Changes or configuration in Ubuntu | pezayo's Blog</title>
+  <title> | pezayo's Blog</title>
   
 
 
@@ -207,7 +217,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pezayo.com/2022/04/08/Changes%20in%20Ubuntu/">
+    <link itemprop="mainEntityOfPage" href="https://pezayo.com/2022/11/02/Multisim%20Edu%20PLD%20%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/classic.jpg">
@@ -220,7 +230,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Changes or configuration in Ubuntu
+          
         </h1>
 
         <div class="post-meta">
@@ -229,24 +239,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-04-08 01:55:08" itemprop="dateCreated datePublished" datetime="2022-04-08T01:55:08+08:00">2022-04-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-30 23:25:38" itemprop="dateModified" datetime="2022-09-30T23:25:38+08:00">2022-09-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
-                </span>
+              <time title="创建时间：2022-11-02 22:13:04 / 修改时间：22:12:33" itemprop="dateCreated datePublished" datetime="2022-11-02T22:13:04+08:00">2022-11-02</time>
             </span>
 
           
@@ -265,8 +260,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/04/08/Changes%20in%20Ubuntu/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/04/08/Changes%20in%20Ubuntu/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/11/02/Multisim%20Edu%20PLD%20%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/11/02/Multisim%20Edu%20PLD%20%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,16 +271,15 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
+              <span>3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
-            <div class="post-description">some annoying details and some customize operation</div>
 
         </div>
       </header>
@@ -296,50 +290,82 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="changes-in-ubuntu"><a href="#Changes-in-Ubuntu" class="headerlink" title="Changes in Ubuntu"></a>Changes in Ubuntu<a href="#changes-in-ubuntu" class="header-anchor">#</a></h1><h2 id="gai-bian-terminal-de-yan-se-she-zhi"><a href="#改变terminal的颜色设置" class="headerlink" title="改变terminal的颜色设置"></a>改变terminal的颜色设置<a href="#gai-bian-terminal-de-yan-se-she-zhi" class="header-anchor">#</a></h2><p><a target="_blank" rel="noopener" href="https://vitux.com/how-to-customize-ubuntu-bash-prompt/">终端优化</a></p>
-<p>通过以上链接改变了prompts的字体颜色，由绿色改为蓝色，将PS1中的\u前的中括号内的32（绿色）改为34（蓝色）</p>
-<img src="https://s2.loli.net/2022/04/08/YJytekO1lUCnpAf.png" alt="image-20220408020417360">
-
-<h2 id="aptitude"><a href="#aptitude" class="headerlink" title="aptitude"></a>aptitude<a href="#aptitude" class="header-anchor">#</a></h2><p>2022年3月5日，12点04分</p>
-<p><code>sudo apt install aptitude</code> 下载安装了aptitude包管理工具</p>
-<p>aptitude 相比apt拥有一个图形化界面，更加友好，且能直接显示已安装的包，未安装的包，待升级的包的数量。</p>
-<h2 id="vim-themes"><a href="#vim-themes" class="headerlink" title="vim themes"></a>vim themes<a href="#vim-themes" class="header-anchor">#</a></h2><p>我突然想配置我的Vim的界面，于是我在下面链接找到教程</p>
-<p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/">一篇文档</a></p>
-<p>还有 ghr 学长的配置，链接为 <a target="_blank" rel="noopener" href="https://github.com/njughr/dotfiles/tree/main/linux/vim">github </a>参考自 MIT 的老师。</p>
-<h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux<a href="#tmux" class="header-anchor">#</a></h2><p>tmux 是一个多终端系统。可以比较方面的实现无鼠标多终端操作。此外 tmux 还适用于在服务器上运行，可避免服务器杀死本地远程连接长时间无操作的程序。</p>
-<p>其相关配置仍参考 ghr 学长的配置。</p>
-<h1 id="sshd-config"><a href="#sshd-config" class="headerlink" title="sshd_config"></a>sshd_config<a href="#sshd-config" class="header-anchor">#</a></h1><p>修改sshd_config文件，修改后结果在下一页中</p>
-<p><a href="https://pezayo.com/2022/04/08/Changes%20in%20Ubuntu/sshd_confi%20c24b2/">sshd_config</a></p>
-<p>除此之外，还需要运行<code>sudo service sshd restart</code> 将ssh服务重新配置。</p>
-<h2 id="wang-luo-wen-ti"><a href="#网络问题" class="headerlink" title="网络问题"></a>网络问题<a href="#wang-luo-wen-ti" class="header-anchor">#</a></h2><p>虚拟机网络出现大问题，使用NAT，桥接，hostonly都出现问题。反应为使用以下命令没有用。都显示Unit networking.service not found. 以下命令全部没用。以下命令均为从英文网站中找到的命令，检索信息为***.service not found</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart networking</span><br><span class="line">systemctl start NetworkManager</span><br><span class="line">systemctl <span class="built_in">enable</span> NetworkManager</span><br><span class="line">service network restart</span><br><span class="line">sudo service network-manager stop</span><br></pre></td></tr></table></figure>
-
-<p>除此之外，我还有去按照那些英文教程去改配置文件，表现为以下几个文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/NetworkManager/NetworkManager.conf</span><br><span class="line">sudo vim /etc/systemd/network/05-eth0.network</span><br><span class="line">sudo vim /etc/network/interfaces</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>其中NetworkManager.conf中的内容为将false改为true，但我觉得是错误的做法。我后来又将其改了回来，即为保持这个文件默认不变。另外05-eth0.network文件原本不存在，我手动建立一个后填写东西后，显然我不会，我又将其删除。依然保持不变。</p>
+        <h1 id="multisim-edu-pld-de-shi-yong"><a href="#Multisim-Edu-PLD-的使用" class="headerlink" title="Multisim Edu PLD 的使用"></a>Multisim Edu PLD 的使用<a href="#multisim-edu-pld-de-shi-yong" class="header-anchor">#</a></h1><blockquote>
+<p>之所以想要写这篇文档是因为有许多同学（包括我自己在内）都被误导，认为 Vivado 只能装在 C 盘内才可被 Multisim 识别。这在我之前的有关于 Multisim 的安装的文档中讲到过。其实装在 C 盘说可以让 Multisim 自动识别到 Vivado，我们其实可以手动指定 Vivado 的位置。这篇文档将会从 Multisim 进行 basys3 FPGA 开发板实验讲起。</p>
 </blockquote>
-<p>最终的解决办法是在CSDN上找到，准确来说应该不是CSDN，而是我换了一个检索关键字，直接搜索<strong>网卡消失，</strong>所以这个问题的解决办法还是在interfaces中去进行更改，加上eth33选项。因为最初的症状表现为使用<code>ifconfig</code> 只能看到本地回环的网卡选项，而使用<code>ifconfig -a</code> 能看到ens33选项，但是上面的ip地址不合理。在interface中加入ens33后，再在命令行输入以下命令重新分配ip</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pzy111@pezayo:~$ sudo ifconfig ens33 up</span><br><span class="line">pzy111@pezayo:~$ sudo dhclient ens33</span><br><span class="line">pzy111@pezayo:~$ sudo ifconfig ens33</span><br><span class="line">ens33: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.8.128  netmask 255.255.255.0  broadcast 192.168.8.255</span><br><span class="line">        inet6 fe80::20c:29ff:feb4:6d14  prefixlen 64  scopeid 0x20&lt;<span class="built_in">link</span>&gt;</span><br><span class="line">        ether 00:0c:29:b4:6d:14  txqueuelen 1000  (以太网)</span><br><span class="line">        RX packets 16  bytes 2177 (2.1 KB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 67  bytes 8824 (8.8 KB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br></pre></td></tr></table></figure>
-
-<p>现在可以正常上网。</p>
-<blockquote>
-<p>注：此处仅仅是瞎碰出来的，他确实不稳定。</p>
+<p>省流：<em><strong>Vivado 是可以装在 C 盘以外的盘的。不需要专门为 C 盘扩容去安装几十个G的Vivado</strong></em></p>
+<p>假如你不会 Multisim PLD 的使用建议从头阅读，假如你熟悉使用，就是想知道 Vivado 装在 C 盘以外的盘如何处理，直接跳至末尾看 <strong>Vivado 不在 C 盘即可</strong> 即可。</p>
+<h2 id="multisim-pld-de-cao-zuo-liu-cheng"><a href="#Multisim-PLD-的操作流程" class="headerlink" title="Multisim PLD 的操作流程"></a>Multisim PLD 的操作流程<a href="#multisim-pld-de-cao-zuo-liu-cheng" class="header-anchor">#</a></h2><h3 id="cao-zuo-huan-jing"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境<a href="#cao-zuo-huan-jing" class="header-anchor">#</a></h3><ul>
+<li><p>操作系统：Windows 10</p>
+</li>
+<li><p>容量：40 个 G 起步（Vivado 2018.3）</p>
+</li>
+<li><p>软件：Multisim 14.2 Edu，Vivado 2018.3</p>
+</li>
+</ul>
+<p>同样不推荐 Mac 用户。Mac 用户另请高明，或者老老实实使用实验室电脑。</p>
+<h3 id="jian-li-xiang-mu"><a href="#建立项目" class="headerlink" title="建立项目"></a>建立项目<a href="#jian-li-xiang-mu" class="header-anchor">#</a></h3><p>新建一个 Multisim 项目，如图选择<code>新建 PLD 支电路</code>。</p>
+<p>一般都建议选支电路不要选层次块。以及后续开发在 PLD 模块中自己搭建模块时也用支电路而不用层次块。具体原因为支电路仅仅在这个工程内有效。而如果想在其他工程中使用其实可以通过简单的复制粘贴过去，此时两个工程间的两个模块互不映像。而如果选用层次块，层次块自己创建一个文件与之对应，修改这个层次块会修改这个文件。此时如果两个工程用同一个层次块，这边修改，另外一边也会跟着修改。<strong>除非你的模块已经做的非常好了，在每个工程中都能用，且保证自己不会去修改它。就像 C 语言中的库函数一样，你不会去改库函数</strong>。但考虑到大家的时间有限，很难自己能搭出一个万能的模块，还是建议大家用支电路，这个也允许在不同工程之间复制粘贴。</p>
+<p><img src="https://s2.loli.net/2022/11/02/Nq1bXaFWBpP2GTw.png" alt="选择新建支电路.png"></p>
+<h3 id="xuan-ze-pei-zhi-basys3"><a href="#选择配置-——-basys3" class="headerlink" title="选择配置 —— basys3"></a>选择配置 —— basys3<a href="#xuan-ze-pei-zhi-basys3" class="header-anchor">#</a></h3><p><img src="https://s2.loli.net/2022/11/02/sxJlLH6GEVgcFfM.png" alt="选择 basys 3 选项.png"></p>
+<p>数字电路实验使用的时 Basys3 开发板，固定选择如图配置就行。后续还可以自定义 PLD 模块名称，选择 PLD 模块的 IO 口。在此不作展示。仅仅说明原理。</p>
+<p>原理：Basys3 开发板上有许多引脚这些都是固定的，全都有自己的名字编号的。Multisim 中也存有 Basys3 的资料库，所以其直接提供好了那么多引脚，你只需要选择你需要的引脚即可。如 JB0，JB1，SW0，SW1，LED0，LED1等等。这些编号全都有其对应的外部设备对应（称为“外设”）。</p>
+<p>如下所示已经搭建好了一个 PLD 模块</p>
+<p><img src="https://s2.loli.net/2022/11/02/ZAirfIbPRUNXxeq.png" alt="PLD模块.png"></p>
+<h3 id="da-jian-men-dian-lu"><a href="#搭建门电路" class="headerlink" title="搭建门电路"></a>搭建门电路<a href="#da-jian-men-dian-lu" class="header-anchor">#</a></h3><p>上述那个 PLD 模块其实就是 Basys3 开发板，我们需要在 Basys3 开发板里面搭建自己的逻辑电路，所以我们需要点进去这个模块，点进这个模块可以双击这个 PLD 模块然后点打开子电路，也可以将鼠标悬停在 PLD 模块上会在左上角出现一个小标志，点击这个小标志也能进去。当然也可以看左边的资源管理器视图，当前是 Design1，点击下面的那个 PLD 就可以进子电路了。</p>
+<p><img src="https://s2.loli.net/2022/11/02/LvuF3Ph986NonH7.png" alt="放置门电路.png"></p>
+<p>如上是已经在子电路里面并且搭建了一个简单的与门的逻辑电路。从拨码开关 SW0 和 SW1 读入电平信号，相与后输出至 LED0 对应的 LED 灯。</p>
+<h3 id="shao-lu-cheng-bit-liu"><a href="#烧录成-bit-流" class="headerlink" title="烧录成 bit 流"></a>烧录成 bit 流<a href="#shao-lu-cheng-bit-liu" class="header-anchor">#</a></h3><blockquote>
+<p>前面都很简单相当于是废话，这里才是重中之重，误导了一批又一批人，包括我在内，包括实验中心老师在内。</p>
 </blockquote>
-<p>系统启动时，网卡没有启动，每次网卡都没有自动获取到ip地址，都需要去进行手动的获取，使用<code>sudo dhclient ens33</code> 去获得ip地址。如果不行使用<code>sudo ifconfig ens33 up</code> 去启动网卡，把up改为down则为关闭网卡。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo lshw -C network     <span class="comment"># 检查网络配置</span></span><br><span class="line">$ sudo systemctl status systemd-networkd   <span class="comment"># 检查服务是否启动</span></span><br><span class="line">$ sudo systemctl start systemd-networkd</span><br><span class="line">$ sudo systemctl <span class="built_in">enable</span> systemd-networkd</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/witton/article/details/109312331">虚拟机中安装的CentOS8无法启动网卡使用网络_witton的博客-CSDN博客_centos8 unmanaged</a></p>
-<p>关于Ubuntu的网络配置，网上一致的说法为有两个可以配置的</p>
+<p>将这个逻辑电路烧录成硬件可读取的 bit 流，才可被 Basys3 开发板运行。这里的操作是要去后台调用 Vivado。</p>
+<p>然后悲剧的是曾经一度以为 Vivado 只能在 C 盘才可被 Multisim 识别。其实这句话应该被改为 Vivado 只有在 C 盘才可别 Multisim <strong>自动</strong>识别。如下所示。操作如下。</p>
+<p>点击左上角的那个 <code>导出至PLD</code> 的小按钮。（鼠标悬停在这个按钮上会出现这个字样）点击之后出现如下界面</p>
+<p><img src="https://s2.loli.net/2022/11/02/kOeaTB7DxU5o98b.png" alt="选择生成选项.png"></p>
+<ul>
+<li>第一个选项的意思是生成 bit 流，同时将这个 bit 流烧录至开发板中（此时需要你的电脑已经连接了开发板，如果没连接则无法操作成功）</li>
+<li>第二个选项的意思是只生成 bit 流，省去了烧录到开发板的过程，这时你的电脑不需要连接开发板也可生成 bit 流。</li>
+<li>第三个选项不重要，至少我都没用过。。。。</li>
+</ul>
+<p>在该演示中因为没有开发板，所以这里选择第二个。接下来进入到了最重要的下一步。</p>
+<p>以下是 Vivado 装在 C 盘的情况。</p>
+<p><img src="https://s2.loli.net/2022/11/02/JSNnliby9hmOEjM.png" alt="自动识别.png"></p>
+<ul>
+<li><p>可以看见这里识别出来了 Vivado，但这里有个（不被支持）字样。<strong>注意，在我看来，这应该是个bug，其实这个不被支持并不影响使用，忽视即可。</strong></p>
+</li>
+<li><p>下面的那个编程文件就是输出的 bit 流文件，可以自定义名称和地址。</p>
+</li>
+<li><p>再下面的这个高级设置要注意。这里有个 Xilinx user constraint files(*.xdc) 的选项。可以看出他需要一个 xdc 后缀的文件。这个文件一般是在 Multisim 的安装目录下。进入你的目录，我这里的默认目录是  <code>C:\Program Files (x86)\National Instruments\Circuit Design Suite 14.2\pldconfig</code>。就是在这个 pldconfig 目录下，有这些 xdc 文件。这里是使用 Basys3 开发板，故选择 <strong>DigilentBasys3.xdc</strong> 这个文件。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意，这个文件一般是默认配置好的，但也会，并且是经常会出现弄错的情况，或者这一栏是空的，这时候就需要去自己去手动选择，点击右边，点击那三个小点，可以打开文件资源管理器，选中对应 xdc 文件即可。</p>
+</blockquote>
+<p>下面这个是点击完成后出现的正在处理计算的界面。这里是 2 步，如果你之前选择了第一个选项则是 4 步。</p>
+<p><img src="https://s2.loli.net/2022/11/02/m5HKDldrSphWMZx.png" alt="正在烧录.png"></p>
+<p>这里成功生成，可以看到左下角显示 0 错误 0 警告。代表已经成功生成了 bit 流</p>
+<p><img src="https://s2.loli.net/2022/11/02/Y3R82IeVqJ71xHS.png" alt="0错误0警告.png"></p>
+<p>此时便可在对应的路径下找到这个 bit 流文件</p>
+<p>这样一套下来点击完成就可以去烧录了。再看接下来的情况，是 Vivado 不在 C 盘的情况。</p>
+<h2 id="vivado-bu-zai-c-pan"><a href="#Vivado-不在-C-盘" class="headerlink" title="Vivado 不在 C 盘"></a>Vivado 不在 C 盘<a href="#vivado-bu-zai-c-pan" class="header-anchor">#</a></h2><p><img src="https://s2.loli.net/2022/11/02/ewTmrUEpkYOxzW3.png" alt="没有vivado.png"></p>
+<p>Vivado 不在 C 盘时这个界面如下，没有识别到 Vivado。此时可以手动添加。</p>
+<p>点击右边这个 Browse，选择 Vivado 所在的目录。这里以 Vivado2018.3 举例（推荐搭建安装2018.3的版本，只有40个G，且也能完成任务）</p>
+<p>选中 Vivado 对应的版本的那个文件夹就行。如下所示。选中这个 2018.3 的文件夹即可。点击确定即可成功找到</p>
+<p><img src="https://s2.loli.net/2022/11/02/wipsXJUnaSm5WyP.png" alt="选择vivado.png"></p>
+<p>成功添加后如下所示，显然与之前自动识别出来的效果一样，虽然还有一个不被支持字样。但可以看见后面有个 User specified,代表是我们指定的。不是 Multisim 自己找到的。两者没有任何差别。</p>
+<blockquote>
+<p> <strong>注意</strong>（很重要）：这时候眼尖的小伙伴就发现了，这里 .xdc 文件怎么在 D 盘里面啊。这是因为这个素材来自另外一台电脑，这里的截图素材并不完全来自同一台机子。这里的情况是因为这个 xdc 文件路径里面带有中文，也就是说，Multisim 并没有装在默认位置，而是装在了自定义的文件夹里，而且这个文件夹带有中文（太悲催了，buff 叠满了）。这时候就无法读取，需要另外新开一个无中文的路径，把 xdc 文件拷贝过去。</p>
+</blockquote>
+<p><img src="https://s2.loli.net/2022/11/02/U29lLXJibvzaqf5.png" alt="已经选择好配置.png"></p>
+<h2 id="zong-jie"><a href="#总结" class="headerlink" title="总结"></a>总结<a href="#zong-jie" class="header-anchor">#</a></h2><p>以上就是这么多。总共分为以下几点</p>
 <ol>
-<li>systemd-networkd系统层面的，即命令行层面的，调用&#x2F;etc&#x2F;network&#x2F;interfaces里的配置</li>
-<li>NetworkManager，需要额外的去下载的，但一般带有桌面的系统自带。</li>
+<li>Multisim PLD 的使用教程（比较简单）</li>
+<li>可以只生成 bit 流而不写入开发板</li>
+<li>Vivado 也可以不装在 C 盘（重要）</li>
+<li>xdc 文件不能有中文路径（重要）</li>
 </ol>
-<p>NetworkManager拥有更高的优先级，即他存在时，另一个将不工作。但是如果&#x2F;etc&#x2F;network&#x2F;interfaces被改动了，则会被挤下去。此时需要去&#x2F;etc&#x2F;NetworkManager&#x2F;NetworkManager.conf文件中去更改，将managed设置为true，即使他仍然可以接管。</p>
-<blockquote>
-<p>另外关于我的虚拟机上出现的问题，表现为我的有线连接无法被识别，无法被托管。我最终在上面这个CSDN中找到解答。我输入nmcli 显示lo 和 ens33 均未托管。但是我在输入nmcli n显示enable，此时只需要输入nmcli n on 即可重启我的服务。有线连接立马出来，立竿见影！！</p>
-</blockquote>
+<p>祝大家数电实验愉快！</p>
+<p>附上我的邮箱：<a href="mailto:&#50;&#48;&#x31;&#49;&#56;&#48;&#x30;&#x37;&#x30;&#x40;&#x73;&#109;&#97;&#x69;&#x6c;&#46;&#110;&#x6a;&#x75;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;">&#50;&#48;&#x31;&#49;&#56;&#48;&#x30;&#x37;&#x30;&#x40;&#x73;&#109;&#97;&#x69;&#x6c;&#46;&#110;&#x6a;&#x75;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;</a></p>
 
     </div>
 
@@ -365,7 +391,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://pezayo.com/2022/04/08/Changes%20in%20Ubuntu/" title="Changes or configuration in Ubuntu">https://pezayo.com/2022/04/08/Changes in Ubuntu/</a>
+    <a href="https://pezayo.com/2022/11/02/Multisim%20Edu%20PLD%20%E7%9A%84%E4%BD%BF%E7%94%A8/" title="">https://pezayo.com/2022/11/02/Multisim Edu PLD 的使用/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -401,13 +427,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/04/08/Changes%20in%20Ubuntu/sshd_confi%20c24b2/" rel="prev" title="sshd_config content">
-      <i class="fa fa-chevron-left"></i> sshd_config content
+    <a href="/2022/09/11/rime-double-pinyin-fly-with-fcitx-in-Ubuntu/" rel="prev" title="rime double_pinyin_fly with fcitx in Ubuntu">
+      <i class="fa fa-chevron-left"></i> rime double_pinyin_fly with fcitx in Ubuntu
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/04/08/hexo%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/" rel="next" title="hexo图片问题">
-      hexo图片问题 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -467,7 +490,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#changes-in-ubuntu"><span class="nav-number">1.</span> <span class="nav-text">Changes in Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gai-bian-terminal-de-yan-se-she-zhi"><span class="nav-number">1.1.</span> <span class="nav-text">改变terminal的颜色设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#aptitude"><span class="nav-number">1.2.</span> <span class="nav-text">aptitude</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-themes"><span class="nav-number">1.3.</span> <span class="nav-text">vim themes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tmux"><span class="nav-number">1.4.</span> <span class="nav-text">tmux</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sshd-config"><span class="nav-number">2.</span> <span class="nav-text">sshd_config</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wang-luo-wen-ti"><span class="nav-number">2.1.</span> <span class="nav-text">网络问题</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#multisim-edu-pld-de-shi-yong"><span class="nav-number">1.</span> <span class="nav-text">Multisim Edu PLD 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#multisim-pld-de-cao-zuo-liu-cheng"><span class="nav-number">1.1.</span> <span class="nav-text">Multisim PLD 的操作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cao-zuo-huan-jing"><span class="nav-number">1.1.1.</span> <span class="nav-text">操作环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jian-li-xiang-mu"><span class="nav-number">1.1.2.</span> <span class="nav-text">建立项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xuan-ze-pei-zhi-basys3"><span class="nav-number">1.1.3.</span> <span class="nav-text">选择配置 —— basys3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#da-jian-men-dian-lu"><span class="nav-number">1.1.4.</span> <span class="nav-text">搭建门电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shao-lu-cheng-bit-liu"><span class="nav-number">1.1.5.</span> <span class="nav-text">烧录成 bit 流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vivado-bu-zai-c-pan"><span class="nav-number">1.2.</span> <span class="nav-text">Vivado 不在 C 盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zong-jie"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
