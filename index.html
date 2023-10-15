@@ -907,7 +907,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-13 02:30:12" itemprop="dateModified" datetime="2022-08-13T02:30:12+08:00">2022-08-13</time>
+                <time title="修改时间：2023-10-15 23:29:57" itemprop="dateModified" datetime="2023-10-15T23:29:57+08:00">2023-10-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -939,14 +939,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
+              <span>4.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -958,11 +958,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="qt-creator"><a href="#Qt-Creator" class="headerlink" title="Qt Creator"></a>Qt Creator<a href="#qt-creator" class="header-anchor">#</a></h1><h2 id="zi-fu-chuan"><a href="#字符串" class="headerlink" title="字符串"></a>字符串<a href="#zi-fu-chuan" class="header-anchor">#</a></h2><p>Qt 中字符串有 QString 和 QTextStream 类型。当然，也有 QChar 的类型。</p>
-<p>其中就有涉及到给字符串写入的操作。在 Qt 的文档中，原本有 <code>asprintf()</code> 可以调用，相当于 <code>sprintf()</code> ，但是 Qt 特别说明了不建议采用这个</p>
-<blockquote>
-<p>Warning: We do not recommend using QString::asprintf() in new Qt code. Instead, consider using QTextStream or arg(), both of which support Unicode strings seamlessly and are type-safe. Here is an example that uses QTextStream:</p>
-</blockquote>
+          <h1 id="qt-creator-gong-cheng"><a href="#Qt-Creator-工程" class="headerlink" title="Qt Creator 工程"></a>Qt Creator 工程<a href="#qt-creator-gong-cheng" class="header-anchor">#</a></h1><h2 id="chu-shi-hua"><a href="#初始化" class="headerlink" title="初始化"></a>初始化<a href="#chu-shi-hua" class="header-anchor">#</a></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui &#123; <span class="keyword">class</span> <span class="title class_">MainWindow</span>; &#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MainWindow</span> : <span class="keyword">public</span> QMainWindow</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">MainWindow</span>(QWidget *parent = <span class="literal">nullptr</span>);</span><br><span class="line">    ~<span class="built_in">MainWindow</span>();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">TrtInfer</span><span class="params">(<span class="type">const</span> std::string&amp; model_dir, <span class="type">const</span> std::string&amp; video_file)</span></span>;</span><br><span class="line"></span><br><span class="line">    QGraphicsScene scene;</span><br><span class="line"><span class="comment">//    QPixmap pixmap;</span></span><br><span class="line"><span class="comment">//    QImage image;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> slots:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">on_ok_btn_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">on_quit_btn_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">on_show_btn_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> slots:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show_result</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Ui::MainWindow *ui;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>初始化大致如上所示。其中 <code>Q_OBJECT</code> 乃是宏定义，记录了一些默认的元数据（成员变量，成员函数）</p>
+<h2 id="bian-yi-yun-xing"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行<a href="#bian-yi-yun-xing" class="header-anchor">#</a></h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/08/09/Qt-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/#more" rel="contents">
@@ -1447,7 +1446,7 @@
 <div class="copyright">
   
   &copy; 2022-03 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1456,12 +1455,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">35k</span>
+    <span title="站点总字数">41k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">32 分钟</span>
+    <span title="站点阅读时长">37 分钟</span>
 </div>
 
 

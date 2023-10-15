@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"pezayo.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Qt Creator#字符串#Qt 中字符串有 QString 和 QTextStream 类型。当然，也有 QChar 的类型。 其中就有涉及到给字符串写入的操作。在 Qt 的文档中，原本有 asprintf() 可以调用，相当于 sprintf() ，但是 Qt 特别说明了不建议采用这个  Warning: We do not recommend using QString::asprintf">
+  <meta name="description" content="Qt Creator 工程#初始化#12345678910111213141516171819202122232425262728namespace Ui &amp;#123; class MainWindow; &amp;#125;class MainWindow : public QMainWindow&amp;#123;    Q_OBJECTpublic:    MainWindow(QWidget *paren">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Qt 常用语法">
 <meta property="og:url" content="https://pezayo.com/2022/08/09/Qt-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="pezayo&#39;s Blog">
-<meta property="og:description" content="Qt Creator#字符串#Qt 中字符串有 QString 和 QTextStream 类型。当然，也有 QChar 的类型。 其中就有涉及到给字符串写入的操作。在 Qt 的文档中，原本有 asprintf() 可以调用，相当于 sprintf() ，但是 Qt 特别说明了不建议采用这个  Warning: We do not recommend using QString::asprintf">
+<meta property="og:description" content="Qt Creator 工程#初始化#12345678910111213141516171819202122232425262728namespace Ui &amp;#123; class MainWindow; &amp;#125;class MainWindow : public QMainWindow&amp;#123;    Q_OBJECTpublic:    MainWindow(QWidget *paren">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-09T05:27:50.000Z">
-<meta property="article:modified_time" content="2022-08-12T18:30:12.160Z">
+<meta property="article:modified_time" content="2023-10-15T15:29:57.944Z">
 <meta property="article:author" content="pezayo">
 <meta property="article:tag" content="Qt">
 <meta name="twitter:card" content="summary">
@@ -236,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-13 02:30:12" itemprop="dateModified" datetime="2022-08-13T02:30:12+08:00">2022-08-13</time>
+                <time title="修改时间：2023-10-15 23:29:57" itemprop="dateModified" datetime="2023-10-15T23:29:57+08:00">2023-10-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -275,14 +275,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
+              <span>4.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -294,7 +294,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="qt-creator"><a href="#Qt-Creator" class="headerlink" title="Qt Creator"></a>Qt Creator<a href="#qt-creator" class="header-anchor">#</a></h1><h2 id="zi-fu-chuan"><a href="#字符串" class="headerlink" title="字符串"></a>字符串<a href="#zi-fu-chuan" class="header-anchor">#</a></h2><p>Qt 中字符串有 QString 和 QTextStream 类型。当然，也有 QChar 的类型。</p>
+        <h1 id="qt-creator-gong-cheng"><a href="#Qt-Creator-工程" class="headerlink" title="Qt Creator 工程"></a>Qt Creator 工程<a href="#qt-creator-gong-cheng" class="header-anchor">#</a></h1><h2 id="chu-shi-hua"><a href="#初始化" class="headerlink" title="初始化"></a>初始化<a href="#chu-shi-hua" class="header-anchor">#</a></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui &#123; <span class="keyword">class</span> <span class="title class_">MainWindow</span>; &#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MainWindow</span> : <span class="keyword">public</span> QMainWindow</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">MainWindow</span>(QWidget *parent = <span class="literal">nullptr</span>);</span><br><span class="line">    ~<span class="built_in">MainWindow</span>();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">TrtInfer</span><span class="params">(<span class="type">const</span> std::string&amp; model_dir, <span class="type">const</span> std::string&amp; video_file)</span></span>;</span><br><span class="line"></span><br><span class="line">    QGraphicsScene scene;</span><br><span class="line"><span class="comment">//    QPixmap pixmap;</span></span><br><span class="line"><span class="comment">//    QImage image;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> slots:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">on_ok_btn_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">on_quit_btn_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">on_show_btn_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> slots:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show_result</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Ui::MainWindow *ui;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>初始化大致如上所示。其中 <code>Q_OBJECT</code> 乃是宏定义，记录了一些默认的元数据（成员变量，成员函数）</p>
+<h2 id="bian-yi-yun-xing"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行<a href="#bian-yi-yun-xing" class="header-anchor">#</a></h2><p>先前使用的是 qmake，qmake 我懒得看到底怎么弄了，干脆直接用 QtCreator 来实现就行了。</p>
+<p>2023 年了，使用 cmake 进行编译。QtCreator 中的默认的 cmake generator 命令如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cmake -DQT_QMAKE_EXECUTABLE:STRING=%&#123;Qt:qmakeExecutable&#125; \</span><br><span class="line">-DCMAKE_PREFIX_PATH:STRING=%&#123;Qt:QT_INSTALL_PREFIX&#125; \</span><br><span class="line">-DCMAKE_C_COMPILER:STRING=%&#123;Compiler:Executable:C&#125; \</span><br><span class="line">-DCMAKE_CXX_COMPILER:STRING=%&#123;Compiler:Executable:Cxx&#125; \</span><br><span class="line">-G<span class="string">&quot;CodeBlocks - Ninja&quot;</span> \</span><br><span class="line">-S &#123;source_director&#125; -B &#123;build_directory&#125;</span><br></pre></td></tr></table></figure>
+
+<p>部署（build）运行命令很简单</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake --build &#123;build_dirctory&#125; --target all</span><br></pre></td></tr></table></figure>
+
+<p>上面的是使用 QtCreator 图形化界面来进行完成的。实际上只是点击部署，运行按钮会出现这些东西。</p>
+<p><em><strong>我还尝试了一下仅使用命令行来运行 Qt 工程，也可以成功，命令如下</strong></em></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> build &amp;&amp; <span class="built_in">cd</span> build</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建 build tree</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">cmake .. -D&#123;必要的自定义宏&#125;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">生成 target</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">cmake --build . --target all</span></span><br><span class="line">或者尝试使用 make</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make</span></span><br></pre></td></tr></table></figure>
+
+<p>其中上面的宏，我并没有像 QtCreator 中一样有那么多，<strong>其实完全都可以不用宏（假如这个 Qt 程序不联合其他的工程）便可以跑起来。</strong></p>
+<h1 id="qt-yu-fa"><a href="#Qt-语法" class="headerlink" title="Qt 语法"></a>Qt 语法<a href="#qt-yu-fa" class="header-anchor">#</a></h1><h2 id="zi-fu-chuan"><a href="#字符串" class="headerlink" title="字符串"></a>字符串<a href="#zi-fu-chuan" class="header-anchor">#</a></h2><p>Qt 中字符串有 QString 和 QTextStream 类型。当然，也有 QChar 的类型。</p>
 <p>其中就有涉及到给字符串写入的操作。在 Qt 的文档中，原本有 <code>asprintf()</code> 可以调用，相当于 <code>sprintf()</code> ，但是 Qt 特别说明了不建议采用这个</p>
 <blockquote>
 <p>Warning: We do not recommend using QString::asprintf() in new Qt code. Instead, consider using QTextStream or arg(), both of which support Unicode strings seamlessly and are type-safe. Here is an example that uses QTextStream:</p>
@@ -304,6 +319,12 @@
 
 <p>QString 和 char* 转换网上有许多种说法。和一旦出现中文 char* 转换为 QString 许多方法都会出现乱码的情况，我在 Qt 官方论坛中看到一个方法，不用导入 GBK 编码的方法。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">std::string str = Msg.<span class="built_in">toStdString</span>();	<span class="comment">//Msg QString型变量</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* p = str.<span class="built_in">c_str</span>();        <span class="comment">//char型中文大多数占用3个字节，少数4个字节</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="zhan-shi-tu-xiang"><a href="#展示图像" class="headerlink" title="展示图像"></a>展示图像<a href="#zhan-shi-tu-xiang" class="header-anchor">#</a></h2><p>展示图像代码如下所示，这里考虑的是从 <code>cv::Mat frame</code> 来转换到 Qt 显示图像的。<strong>这里有个重要的细节是 <code>scene</code> 必须不能是一个局部变量</strong>，否则图像将无法显示，应该用全局变量，或者成员变量。这是我自己测试出来的，没看 Qt 文档到底是怎么回事。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">MainWindow::show_image</span><span class="params">()</span></span>&#123;</span><br><span class="line">	scene.<span class="built_in">addPixmap</span>(QPixmap::<span class="built_in">fromImage</span>(<span class="built_in">QImage</span>(frame.data, frame.cols, frame.rows, frame.step,QImage::Format_RGB888)));</span><br><span class="line">    ui-&gt;graphicsView-&gt;<span class="built_in">setScene</span>(&amp;scene);</span><br><span class="line">    ui-&gt;text_plain-&gt;<span class="built_in">setText</span>(<span class="string">&quot;Just show an image&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="lei-cheng-yuan-bian-liang"><a href="#类成员变量" class="headerlink" title="类成员变量"></a>类成员变量<a href="#lei-cheng-yuan-bian-liang" class="header-anchor">#</a></h2><p>有类成员变量的话建议使用指针，这样可以自己在构造函数或者在其他函数中来创建这个成员变量，从而清晰的调用这个类成员变量本身的构造函数。例如  QThread ，仅仅举个例子。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyThread</span>; <span class="comment">// 前向声明</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MainWindow</span> : <span class="keyword">public</span> QMainWindow &#123;</span><br><span class="line">	<span class="built_in">MainWindow</span>()&#123;&#125;</span><br><span class="line">	~<span class="built_in">MainWindow</span>()&#123;&#125;</span><br><span class="line">	MyThread * t;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">MyCreateThread</span><span class="params">()</span></span>&#123; t = <span class="keyword">new</span> <span class="built_in">MyThread</span>(); t-&gt;<span class="built_in">start</span>(); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyThread</span> : <span class="keyword">public</span> QThread &#123;</span><br><span class="line">	<span class="built_in">MyThread</span>() &#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">	~<span class="built_in">Mythread</span>()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -316,6 +337,22 @@
 <p>It could be that you had indeed two debugger sessions running. I just noticed that the views including the ‘active’ frame marker in the stack view are not changed properly right now.</p>
 </blockquote>
 <p>改为一个运行，一个调试之后，这个报错消失。</p>
+<h1 id="qt-gong-ju"><a href="#Qt-工具" class="headerlink" title="Qt 工具"></a>Qt 工具<a href="#qt-gong-ju" class="header-anchor">#</a></h1><h2 id="uic-x2f-pyuic5-x2f-pyside6-uic"><a href="#uic-x2F-pyuic5-x2F-pyside6-uic" class="headerlink" title="uic&#x2F;pyuic5&#x2F;pyside6-uic"></a>uic&#x2F;pyuic5&#x2F;pyside6-uic<a href="#uic-x2f-pyuic5-x2f-pyside6-uic" class="header-anchor">#</a></h2><p>可以用来将 ui 文件进行转换，转换成 cpp 文件，Python 文件。使用 Qt Designer 设计 ui 后，使用这个工具转换成代码，直接调用即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyuic5 -o form_ui.py form.ui </span><br></pre></td></tr></table></figure>
+
+<h2 id="rcc-x2f-pyrcc5-x2f-pyside6-rcc"><a href="#rcc-x2F-pyrcc5-x2F-pyside6-rcc" class="headerlink" title="rcc&#x2F;pyrcc5&#x2F;pyside6-rcc"></a>rcc&#x2F;pyrcc5&#x2F;pyside6-rcc<a href="#rcc-x2f-pyrcc5-x2f-pyside6-rcc" class="header-anchor">#</a></h2><p>与上面的同理，用来将 qrc 资源文件转换成对应的文件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyside6-rcc background.qrc</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="cheng-xu-yi-lai-wen-ti"><a href="#程序依赖问题" class="headerlink" title="程序依赖问题"></a>程序依赖问题<a href="#cheng-xu-yi-lai-wen-ti" class="header-anchor">#</a></h1><h2 id="qt5linguisttools"><a href="#Qt5LinguistTools" class="headerlink" title="Qt5LinguistTools"></a>Qt5LinguistTools<a href="#qt5linguisttools" class="header-anchor">#</a></h2><p>在 Ubuntu20.04 上有时库若安装不完全，会报这个库相关的 cmake 文件不存在的错误。只需要安装相应的包就行。在 Ubuntu 官网查询这个关键字能查到需要安装如下包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install qttools5-dev</span><br></pre></td></tr></table></figure>
+
+<p>安装完之后能够看到相应的目录 <code>/usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools </code>  </p>
+<h2 id="qt6-an-zhuang-wen-ti"><a href="#Qt6-安装问题" class="headerlink" title="Qt6 安装问题"></a>Qt6 安装问题<a href="#qt6-an-zhuang-wen-ti" class="header-anchor">#</a></h2><p>Qt6  没有发布安装文件，只给了源代码，可以进行编译然后安装。在 Qt 官网查询得到 Ubuntu 需要 gcc11 套装才能进行编译。与 Ubuntu20.04 无缘，遂没安装。</p>
+<p>但奇怪的是由 python 管理的 PySide6 却可以进行使用。</p>
+<h2 id="fcitx5-shu-ru-fa-wen-ti"><a href="#fcitx5-输入法问题" class="headerlink" title="fcitx5 输入法问题"></a>fcitx5 输入法问题<a href="#fcitx5-shu-ru-fa-wen-ti" class="header-anchor">#</a></h2><p>使用 PySide6 和 PyQt5 时在输入框中不能使用搜狗输入法。搜狗输入法本身基于 fcitx5。需要下载安装相应的 qt-fcitx5 的包（一系列，不具体叫这个名字）</p>
+<p>在网上得知可以在 Github 上找到相应的 <a target="_blank" rel="noopener" href="https://github.com/fcitx/fcitx5-qt">fcitx5-qt</a> 的仓库，克隆下来进行编译即可得到相应的 <code>libfcitxplatforminputcontextplugin.so</code> 的动态链接库，将这个动态链接库复制到 Python 环境相应的位置即可。</p>
 <h1 id="cheng-xu-da-bao-yi-zhi"><a href="#程序打包移植" class="headerlink" title="程序打包移植"></a>程序打包移植<a href="#cheng-xu-da-bao-yi-zhi" class="header-anchor">#</a></h1><h2 id="tian-jia-suo-you-dong-tai-lian-jie-ku"><a href="#添加所有动态链接库" class="headerlink" title="添加所有动态链接库"></a>添加所有动态链接库<a href="#tian-jia-suo-you-dong-tai-lian-jie-ku" class="header-anchor">#</a></h2><p>使用ldd可以将所有的隐式动态链接库罗列出来，然后再使用 awk 可以将动态链接库全部单独列出来</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在可执行文件所在目录下操作</span></span><br><span class="line">ldd Program &gt; dependancy.txt</span><br><span class="line">dll=$(<span class="built_in">cat</span> dependancy.txt | awk <span class="string">&quot;print $&quot;</span>)</span><br><span class="line"><span class="built_in">cp</span> <span class="variable">$dll</span> ./lib</span><br></pre></td></tr></table></figure>
 
@@ -459,7 +496,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qt-creator"><span class="nav-number">1.</span> <span class="nav-text">Qt Creator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zi-fu-chuan"><span class="nav-number">1.1.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diao-shi"><span class="nav-number">1.2.</span> <span class="nav-text">调试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cheng-xu-da-bao-yi-zhi"><span class="nav-number">2.</span> <span class="nav-text">程序打包移植</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tian-jia-suo-you-dong-tai-lian-jie-ku"><span class="nav-number">2.1.</span> <span class="nav-text">添加所有动态链接库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tian-jia-dong-tai-lian-jie-ku-lu-jing"><span class="nav-number">2.2.</span> <span class="nav-text">添加动态链接库路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#libc6-jian-rong-cao-zuo-xi-tong-jian-rong"><span class="nav-number">2.3.</span> <span class="nav-text">libc6 兼容（操作系统兼容）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shi-yong-debug-diao-shi"><span class="nav-number">2.4.</span> <span class="nav-text">使用DEBUG调试</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qt-creator-gong-cheng"><span class="nav-number">1.</span> <span class="nav-text">Qt Creator 工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#chu-shi-hua"><span class="nav-number">1.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bian-yi-yun-xing"><span class="nav-number">1.2.</span> <span class="nav-text">编译运行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qt-yu-fa"><span class="nav-number">2.</span> <span class="nav-text">Qt 语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zi-fu-chuan"><span class="nav-number">2.1.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zhan-shi-tu-xiang"><span class="nav-number">2.2.</span> <span class="nav-text">展示图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lei-cheng-yuan-bian-liang"><span class="nav-number">2.3.</span> <span class="nav-text">类成员变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diao-shi"><span class="nav-number">2.4.</span> <span class="nav-text">调试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qt-gong-ju"><span class="nav-number">3.</span> <span class="nav-text">Qt 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#uic-x2f-pyuic5-x2f-pyside6-uic"><span class="nav-number">3.1.</span> <span class="nav-text">uic&#x2F;pyuic5&#x2F;pyside6-uic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rcc-x2f-pyrcc5-x2f-pyside6-rcc"><span class="nav-number">3.2.</span> <span class="nav-text">rcc&#x2F;pyrcc5&#x2F;pyside6-rcc</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cheng-xu-yi-lai-wen-ti"><span class="nav-number">4.</span> <span class="nav-text">程序依赖问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#qt5linguisttools"><span class="nav-number">4.1.</span> <span class="nav-text">Qt5LinguistTools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qt6-an-zhuang-wen-ti"><span class="nav-number">4.2.</span> <span class="nav-text">Qt6 安装问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fcitx5-shu-ru-fa-wen-ti"><span class="nav-number">4.3.</span> <span class="nav-text">fcitx5 输入法问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cheng-xu-da-bao-yi-zhi"><span class="nav-number">5.</span> <span class="nav-text">程序打包移植</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tian-jia-suo-you-dong-tai-lian-jie-ku"><span class="nav-number">5.1.</span> <span class="nav-text">添加所有动态链接库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tian-jia-dong-tai-lian-jie-ku-lu-jing"><span class="nav-number">5.2.</span> <span class="nav-text">添加动态链接库路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#libc6-jian-rong-cao-zuo-xi-tong-jian-rong"><span class="nav-number">5.3.</span> <span class="nav-text">libc6 兼容（操作系统兼容）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shi-yong-debug-diao-shi"><span class="nav-number">5.4.</span> <span class="nav-text">使用DEBUG调试</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -533,7 +570,7 @@
 <div class="copyright">
   
   &copy; 2022-03 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -542,12 +579,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">35k</span>
+    <span title="站点总字数">41k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">32 分钟</span>
+    <span title="站点阅读时长">37 分钟</span>
 </div>
 
 
